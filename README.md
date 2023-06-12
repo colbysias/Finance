@@ -6,14 +6,14 @@ Gets real-time stock data by connecting to the IEX API. Allows users to Register
 
 **Front-End Languages/Frameworks:**
 
-HTML
-CSS
+HTML</br>
+CSS</br>
 Bootstrap
 
 **Back-End Languages/Frameworks:**
 
-Python
-Flask
+Python</br>
+Flask</br>
 SQL
 
 **Database:**

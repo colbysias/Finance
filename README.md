@@ -1,4 +1,4 @@
-# finance
+# Finance
 
 Finance Application from CS50. 
 

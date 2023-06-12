@@ -218,9 +218,6 @@ def sell():
     """Sell shares of stock"""
     sell = db.execute("SELECT symbol,quantity FROM transactions WHERE user_id = ? GROUP BY symbol",session["user_id"] )
     currentCash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-
-    print(sell)
-
     if request.method == "GET":
         return render_template("sell.html",sell=sell)
     else:

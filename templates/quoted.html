@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1>Quote</h1>
+        <p></p>
+        <form action="/quote" method="post">
+            <div class="mb-3">
+                <table>
+                    <tr>
+                        <td><b>Company Name:</b> {{ name }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Price:</b> {{ price }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Symbol:</b> {{ symbol }}</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+{% endblock %}

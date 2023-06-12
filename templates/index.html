@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <p></p>
+    <form action="/" method="post">
+        <div class="mb-3">
+            <p>Shares</p>
+           <table>
+                <thead>
+                    <tr>
+                        <th>Owned Stocks</th>
+                        <th># of Shares Owned</th>
+                        <th>Current Price</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in rows %}
+                    <tr>
+                        <td>{{  stock.symbol }}</td>
+                        <td>{{  stock.quantity  }}</td>
+                        <td>${{  stock.stock_price  }}</td>
+                        <td>${{  stock.total_price  }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+           </table>
+
+           <p>Balances</p>
+
+           <table>
+                <thead>
+                    <tr>
+                        <th>Total Stock Balance</th>
+                        <th></th>
+                        <th>Cash Balance</th>
+                        <th></th>
+                        <th>Grand Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ totalPrice }}</td>
+                        <td>+</td>
+                        <td>{{  cash  }}</td>
+                        <td>=</td>
+                        <td>{{  sum  }}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+
+    </form>
+{% endblock %}
